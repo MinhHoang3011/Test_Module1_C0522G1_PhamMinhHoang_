@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="1000px" height="500px" style="border: solid 1px black"></canvas>
+</body>
+</html>
+<!--Hãy viết một chương trình để biểu diễn hình chữ nhật,-->
+<!--với mô tả của lớp hình tròn như sau:-->
+<!--Rectangle: Tên lớp-->
+<!-- - x: Toạ độ x-->
+<!-- - y: Toạ độ y-->
+<!-- -width: chiều dài-->
+<!-- - height: chiều rộng-->
+<!-- - color: Màu sắc (sử dụng max hex)-->
+<!--+ render(canvas): Hiển thị hình chữ nhật trên một canvas-->
+    <!-- - Tạo một hình tròn có toạ độ 10, 10 và bán kính 100, màu viền-->
+    <!--#ff0000-->
+    <!-- - Hiển thị hình chữ nhật trên một canvas bằng cách sử dụng-->
+    <!--phương thức render-->
+
+<script !src="">
+
+    let canvas = document.getElementById("canvas").getContext("2d")
+
+    canvas.beginPath()
+    canvas.fillStyle = "#bf0dda"
+    canvas.arc(10, 10, 100, 0, Math.PI*2)
+    canvas.fill()
+    // canvas.stroke()
+
+
+    class Rectangle{
+        x
+        y
+        width
+        height
+        color
+        constructor(x,y,width,height,color) {
+            this.x = x
+            this.y = y
+            this.width = width
+            this.height = height
+            this.color = color
+        }
+        render(x,y,width,height,color){
+            canvas.beginPath()
+            canvas.fillStyle= color
+            canvas.fillRect(x,y,width,height)
+            canvas.stroke()
+            canvas.closePath()
+        }
+    }
+
+    let hcn = new Rectangle()
+    hcn.render(100,100,150,100, "Purple")
+
+
+</script>
+</body>
+</html>
