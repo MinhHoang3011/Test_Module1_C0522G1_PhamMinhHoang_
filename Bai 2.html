@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-  function insertNumberToArray(arr,x,index){
-    if(index<0||index>arr.length){
-      return arr;
-
-    }else {
-      arr[index]=x;
-    }
-    arr.forEach(x=>{
-      document.write(arr)
-    })
-
-
+  arr = new Array(5);
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = Number(prompt("Emter the Number : "))
   }
+  function insertNumberToArray(arr, x, index) {
+    if (index < 0 || index > arr.length) {
+      return arr;
+    } else {
+      arr[index] = i;
+      return arr;
+    }
+  }
+  console.log(insertNumberToArray(arr,5,1))
 </script>
 </body>
 </html>
